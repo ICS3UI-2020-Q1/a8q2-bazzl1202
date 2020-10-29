@@ -4,7 +4,16 @@ import java.awt.event.*;
 
 public class Main implements Runnable, ActionListener{
 
-  // Class Variables  
+  // Class Variables 
+  JPanel mainPanel; 
+
+  JLabel firstLabel;
+  JLabel secondLabel;
+  JLabel resultLabel;
+
+  JTextField firstInput;
+  JTextField secondInput;
+  JTextField result;
   
 
 
@@ -18,6 +27,28 @@ public class Main implements Runnable, ActionListener{
     frame.setSize(800,600);
     // shows the window
     frame.setVisible(true);
+
+    // initialize the main JPanel
+    mainPanel = new JPanel();
+    // disable any layout helpers
+    mainPanel.setLayout(null);
+
+    //initialize the labels
+    firstLabel = new JLabel("First Number");
+    secondLabel = new JLabel("Second Number");
+    resultLabel = new JLabel("Result");
+    // set the location and setSize
+    firstLabel.setBounds();
+    secondLabel.setBounds();
+    resultLabel.setBounds();
+    // add the JLabels to the main panel
+    mainPanel.add(firstLabel);
+    mainPanel.add(secondLabel);
+    mainPanel.add(resultLabel);
+    
+    // add the main panel to the window
+    frame.add(mainPanel);
+
  
     
 
